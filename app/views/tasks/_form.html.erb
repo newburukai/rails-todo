@@ -26,6 +26,11 @@
     <%= form.date_select :deadline %>
   </div>
 
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.select :user_id, User.all.map { |user| [user.name, user.id] } %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
