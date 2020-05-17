@@ -58,3 +58,5 @@ gem 'seed-fu', '~> 2.3'
 gem "pundit"
 
 gem 'ransack'
+
+gem 'kaminari'

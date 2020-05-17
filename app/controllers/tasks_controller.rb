@@ -7,7 +7,7 @@ class TasksController < ApplicationController
     authorize Task
 
     @q = Task.ransack(params[:q])
-    @tasks = @q.result
+    @tasks = @q.result.page(params[:page])
   end
 
   # GET /tasks/1
