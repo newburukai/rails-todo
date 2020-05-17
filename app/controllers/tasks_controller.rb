@@ -6,7 +6,8 @@ class TasksController < ApplicationController
   def index
     authorize Task
 
-    @tasks = Task.all
+    @q = Task.ransack(params[:q])
+    @tasks = @q.result
   end
 
   # GET /tasks/1
